@@ -10,18 +10,10 @@ export class TodosService {
   todoList: Todo [] = [
     {
       id: 1,
-      title: "Studiare Angular",
+      title: "Opps, non ci sono Task",
       completed: true
     },
-    {
-      id: 2,
-      title: "Capire Angular",
-      completed: false
-    },
-
   ]
-
-
 
   constructor() {}
 

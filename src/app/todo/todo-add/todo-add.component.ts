@@ -16,7 +16,7 @@ export class TodoAddComponent implements OnInit {
   ngOnInit(): void {
   }
   printTodo() {
-    let task: Todo = {id: 1, title:"aaaa", completed: false};
+    let task: Todo = {id: 1, title: this.title, completed: false};
     this.service.addTodo(task);
     this.title = "";
   }
