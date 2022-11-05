@@ -1,5 +1,6 @@
 <div class="list">
-  <ul>
-    <li>Opps, non ci sono Task</li>
+  <ul *ngFor="let item of todos">
+    <li>{{ this.item.title }}</li>
   </ul>
 </div>
+<!-- {{ this.todos | json }} -->

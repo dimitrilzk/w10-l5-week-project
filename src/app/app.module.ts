@@ -8,6 +8,7 @@ import { CompletedPage } from './completed/completed.page';
 import { NavbarComponent } from './navbar/navbar.component';
 import { TodoListComponent } from './todo/todo-list/todo-list.component';
 import { TodoAddComponent } from './todo/todo-add/todo-add.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { TodoAddComponent } from './todo/todo-add/todo-add.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
