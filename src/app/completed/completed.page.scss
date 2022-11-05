@@ -1,0 +1,12 @@
+.todoblock {
+  font-size: 25px;
+  margin-block: 280px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+ul {
+  list-style-type: none;
+  display: contents;
+}

@@ -1,0 +1,23 @@
+.nav {
+  display: flex;
+  justify-content: center;
+  a {
+    font-size: 30px;
+    font-weight: 600;
+    margin-right: 20px;
+    text-decoration: none;
+    color: black;
+  }
+  a:link {
+    color: blueviolet;
+  }
+  a:visited {
+    color: black;
+  }
+  a:hover {
+    color: blueviolet;
+  }
+  a:active {
+    color: blueviolet;
+  }
+}
