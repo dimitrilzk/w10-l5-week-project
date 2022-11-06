@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Todo } from 'src/app/todo.interface';
+import { ClassTodo } from 'src/app/classes/class-todo';
 import { TodosService } from 'src/app/todos.service';
 
 @Component({
@@ -9,12 +9,18 @@ import { TodosService } from 'src/app/todos.service';
 })
 export class TodoListComponent implements OnInit {
 
-  todos: Todo[] = this.service.todoList;
+  todos: ClassTodo[] = this.service.todoList;
 
   constructor(private service: TodosService) { }
 
   ngOnInit(): void {
 
+  }
+  deleteTodo(obj: ClassTodo) {
+    this.service.removeTodo(obj)
+  }
+  checkedTodo(obj: ClassTodo) {
+    this.service.moveTodo(obj)
   }
 
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Todo } from 'src/app/todo.interface';
+import { ClassTodo } from 'src/app/classes/class-todo';
 import { TodosService } from 'src/app/todos.service';
 
 @Component({
@@ -16,9 +16,13 @@ export class TodoAddComponent implements OnInit {
   ngOnInit(): void {
   }
   printTodo() {
-    let task: Todo = {id: 1, title: this.title, completed: false};
-    this.service.addTodo(task);
+    this.service.addTodo(this.title)
     this.title = "";
   }
+  // printTodo() {
+  //   let task: Todo = {id: 1, title: this.title, completed: false};
+  //   this.service.addTodo(task);
+  //   this.title = "";
+  // }
 
 }

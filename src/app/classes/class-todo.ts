@@ -1,7 +1,10 @@
-import { Todo } from "../todo.interface";
+import { InterfaceTodo } from "../todo.interface";
 
-export class ClassTodo implements Todo {
-  id = 1;
-  title = "Fare la spesa";
-  completed = false;
+export class ClassTodo implements InterfaceTodo {
+  id?: number;
+  title: string;
+  completed: boolean = false
+    constructor(title: string) {
+      this.title = title
+    }
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TodosService } from '../todos.service';
 
 @Component({
   templateUrl: './todo.page.html',
@@ -9,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 
 export class TodoPage implements OnInit {
 
-  constructor() { }
+  constructor(private service: TodosService) { }
 
   ngOnInit(): void {
   }

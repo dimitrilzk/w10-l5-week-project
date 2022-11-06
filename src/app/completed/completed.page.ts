@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ClassTodo } from '../classes/class-todo';
+import { TodosService } from '../todos.service';
 
 @Component({
   templateUrl: './completed.page.html',
@@ -6,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CompletedPage implements OnInit {
 
-  constructor() { }
+  completed: ClassTodo [] = this.service.completeTodo
+
+  constructor(private service: TodosService) { }
 
   ngOnInit(): void {
   }

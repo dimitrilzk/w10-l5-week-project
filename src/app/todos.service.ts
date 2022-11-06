@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Todo } from './todo.interface';
+import { ClassTodo } from './classes/class-todo';
+
 
 @Injectable({
   providedIn: 'root'
@@ -7,18 +8,24 @@ import { Todo } from './todo.interface';
 
 export class TodosService {
 
-  todoList: Todo [] = [
-    {
-      id: 1,
-      title: "",
-      completed: true
-    },
-  ]
+  todoList: ClassTodo [] = []
+
+  completeTodo: ClassTodo [] = []
 
   constructor() {}
 
-  addTodo(obj: Todo) {
-    this.todoList.push(obj)
+  addTodo(title: string) {
+    let todo: ClassTodo = new ClassTodo(title);
+    this.todoList.push(todo);
+  }
+  removeTodo(obj: ClassTodo) {
+    let i = this.todoList.indexOf(obj);
+    this.todoList.splice(i, 1);
+  }
+  moveTodo(obj: ClassTodo) {
+    let i = this.todoList.indexOf(obj);
+    this.todoList.splice(i, 1);
+    this.completeTodo.push(obj);
   }
 
 }

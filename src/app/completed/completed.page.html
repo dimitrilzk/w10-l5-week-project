@@ -1,7 +1,8 @@
 <div class="todoblock">
   <div class="list">
-    <ul>
-      <li>Recupero Task...</li>
+    <p *ngIf="completed.length === 0">Recupero Task...</p>
+    <ul *ngFor="let item of completed">
+      <li>- {{ item.title }}</li>
     </ul>
   </div>
 </div>

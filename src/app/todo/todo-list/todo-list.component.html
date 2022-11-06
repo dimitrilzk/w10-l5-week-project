@@ -1,7 +1,11 @@
 <div class="list">
-  <p *ngIf="todos">Opps, non ci sono Task</p>
+  <p *ngIf="todos.length === 0">Opps, non ci sono Task</p>
   <ul *ngFor="let item of todos">
-    <li>{{ this.item.title }}</li>
+    <li>
+      - {{ item.title }}
+      <i class="fa-solid fa-square-check" (click)="checkedTodo(item)"></i>
+      <i class="fa-solid fa-square-minus" (click)="deleteTodo(item)"></i>
+    </li>
   </ul>
 </div>
 <!-- {{ this.todos | json }} -->
