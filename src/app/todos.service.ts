@@ -10,7 +10,7 @@ export class TodosService {
   todoList: Todo [] = [
     {
       id: 1,
-      title: "Opps, non ci sono Task",
+      title: "",
       completed: true
     },
   ]
